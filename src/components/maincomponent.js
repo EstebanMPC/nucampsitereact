@@ -7,7 +7,11 @@ import Home from './homecomponent';
 import Contact from './contactcomponent';
 import About from './aboutcomponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { Button } from 'reactstrap';
 import { connect } from 'react-redux';
+
+// , Modal, ModalHeader, ModalBody,
+//     Form, FormGroup, Input, Label
 
 
 const mapStateToProps = state => {
@@ -22,9 +26,7 @@ const mapStateToProps = state => {
 
 
 class Main extends Component {
-
     render() {
-
         const HomePage = () => {
             return (
                 <Home
@@ -58,5 +60,7 @@ class Main extends Component {
         );
     }
 }
+
+
 
 export default withRouter(connect(mapStateToProps)(Main));
